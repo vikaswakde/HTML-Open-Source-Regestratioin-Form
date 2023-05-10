@@ -1,0 +1,132 @@
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+h1,
+p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+form {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid #3b3b4f;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+  box-sizing: border-box;
+  border: none;
+  background-color: #0a0a23;
+  color: #ffffff;
+  padding: 0.5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  min-width: unset;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #4c4c66;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+a {
+  color: #dfdfe2;
+}
+
+.progress-bar {
+  height: 20px;
+  background-color: #3b3b4f;
+  margin-bottom: 1rem;
+  position: relative;
+  border-radius: 20px;
+}
+
+.progress-bar:after {
+  content: "";
+  background-color: #f5f6f7;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  width: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-label {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.validation-message {
+  display: none;
+  font-size: 0.8rem;
+  color: #f44336;
+}
+
+.show-validation-message {
+  display: block;
+}
+
+input:invalid {
+  border: 1px solid #f44336;
+}
+
+input:valid {
+  border: 1px solid #3b3b4f;
+}
+
+input:invalid + .validation-message {
+  display: block;
+}
+
+input:valid + .progress-bar:after {
+  width: 100%;
+}
